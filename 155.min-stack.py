@@ -20,14 +20,13 @@ class MinStack:
         return self.stack[-1]
 
     def getMin(self) -> int:
-        min_num = []
+        min_num = self.stack[0]
         for i in range(len(self.stack)):
-            if i == 0:
-                min_num.append(self.stack[i])
-            else:
-                if self.stack[i] < min_num[0]:
-                    min_num[0] = self.stack[i]
-        return min_num[0]
+            if i != 0:
+                if self.stack[i] < min_num:
+                    min_num = self.stack[i]                
+                    
+        return min_num
 
 
 # Your MinStack object will be instantiated and called as such:
