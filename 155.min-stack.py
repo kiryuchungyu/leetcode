@@ -20,9 +20,9 @@ class MinStack:
         return self.stack[-1]
 
     def getMin(self) -> int:
+        
         min_num = self.stack[0]
-        for i in range(len(self.stack)):
-            if i != 0:
+        for i in range(1, len(self.stack)):
                 if self.stack[i] < min_num:
                     min_num = self.stack[i]                
                     
@@ -39,7 +39,7 @@ class MinStack:
 
 """
 Accepted
-31/31 cases passed (4964 ms)
-Your runtime beats 5.02 % of python3 submissions
-Your memory usage beats 54.14 % of python3 submissions (18 MB)
+31/31 cases passed (3860 ms)
+Your runtime beats 5.01 % of python3 submissions
+Your memory usage beats 94.82 % of python3 submissions (17.8 MB)
 """
